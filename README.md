@@ -1,28 +1,33 @@
-# Saudi Used Cars Analysis
-Python analysis of 5,344 Saudi used car listings from Kaggle: how brand, year, mileage, and engine size relate to price
+# Which of These Factors (Brand, Mileage, Year) Are Most Linked to Used Car Prices in Saudi Arabia?
 
-## Question
-I wanted to find out which factors (year, mileage, engine size, brand, and model) are most strongly linked to the price of used cars in Saudi Arabia.
+Python analysis of 5,344 Saudi used cars the listings are from Kaggle.
+
+## Why I built this analysis
+A friend of mine told me to buy a used car, so the question popped up in my head, what are the most linked to factors that lower or heighten the price: year, mileage, engine size, brand and model.
 
 ## Data
-The data comes from the "Saudi Arabia Used Cars Dataset" on Kaggle, made by Turki Bintaleb and other collaborators, who collected the listings from the Syarah website (syarah.com). Link: [Saudi Arabia Used Cars Dataset](https://www.kaggle.com/datasets/turkibintalib/saudi-arabia-used-cars-dataset).
+The data is from the [Saudi Arabi Used Cars Dataset] (https://www.kaggle.com/datasets/turkibintalib/saudi-arabia-used-cars-dataset) on Kaggle, created by Turki Bintaleb and his collaborators, who got the listings from the Syarah website. The file I used for this analysis was the cleaned English file, which contains about 8,035 cars and 13 columns. Which is fewer than the 8,248 records on the dataset page, and I still don't know what was removed.
 
-I used the cleaned English file from this dataset, 'UsedCarsSa_Clean_EN.csv'. it contains 8,035 cars, fewer than the 8,248 records described on the dataset page, and I don't know exactly what was removed. After my own cleaning (removing zero prices, impossible mileage, and prices under 5,000 SAR), 5,344 cars were left.
+The data file is not included in this repository. If you wish to run the notebook download the file from Kaggle.
 
-The data file isn't included in this repository, because the dataset's license says the data belongs to its original authors. To run the notebook, download the data from Kaggle and upload it to Google Colab.
+## What I did
+1. Deleted 2,527 cars that have a price of 0 (2,526 were marked "Negotiable") and 70 cars had a mileage of 500,000 km or more.
+2. Removed 94 cars that were priced under 5,000 SAR, which left me with 5,344 cars.
+3. Compared median prices by each year, located a jump for the 2020-2021 models, and tested it with Toyota and the Land Cruiser.
+4. Measured how prices move with year, mileage and engine size.
+5. Compared brands within 2018 cars only.
 
-## Main finding
-Brand and model looked more strongly linked to used car prices than year (0.32), mileage (-0.28), or engine size (0.31). Even among 2018 cars only, Lexus's median price was about 7 times Nissan's.
+## Main findings
+- Brand and model looked more linked to price than year (0.32), mileage (-0.28) or engine size (0.31).
+- Among the 2018 cars, the median price was ranged from 30,000 SAR (Nissan) to 214,500 SAR (Lexus).
+- The 2020-2021 price increase mostly seem to come from the models that were listed and not from newer cars being worth much more.
 
-## Limits
-- About a third of the data was removed during cleaning (8,035 cars became 5,344), and I didn't test whether removing the "Negotiable" cars changed my results.
-- These are listing prices from one website, not final sale prices.
-- Many groups are small, and this shows links, not causes.
+## Limitations
+- About a third of the data was removed, and I chose the 500,000 km and 5,000 SAR cutoffs myself without testing the other valus.
+- I didn't look at regions or fuel types.
+- These were listing prices from one website only, not final sale prices. Certain groups were small, and this shows us links, not causes.
 
-## How to run it
-1. Download the data from Kaggle link above.
-2. Upload the file to Google Colab. The notebook expects it to be named  UsedCarsSA_Clean_EN.csv.
+## How to run
+1. Download the data from the Kaggle link above.
+2. Upload the file to the Google Colab website. The notebook expects it to be named 'UsedCarsSA_Clean_EN.csv'.
 3. Run the notebook from the top.
-
-## Note on AI
-I used an AI assistant throughout this project. It recommended the dataset, assisted in writing the code, and reviewed and adjusted my notes. I ran every step, checked the outputs, and made the cleaning decisions myself. 
