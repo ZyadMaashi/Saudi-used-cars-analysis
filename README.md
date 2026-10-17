@@ -31,3 +31,6 @@ The data file is not included in this repository. If you wish to run the noteboo
 1. Download the data from the Kaggle link above.
 2. Upload the file to the Google Colab website. The notebook expects it to be named 'UsedCarsSA_Clean_EN.csv'.
 3. Run the notebook from the top.
+
+## AI use
+I used Claude throughout this project to give me the dataset and help with the code. For the written notes I told the AI to give me the facts in simple terms and to give me the structure of the notes. then it checked my spelling, grammar and numbers. I wrote the notes myself in my own words and also ran every step, checked the outputs, and made the cleaning choices, including 5,000 SAR and 500,000 km cutoffs.
