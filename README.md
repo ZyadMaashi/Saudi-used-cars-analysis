@@ -6,7 +6,7 @@ Python analysis of 5,344 Saudi used cars the listings are from Kaggle.
 A friend of mine told me he was going to buy a used car, so the question popped up in my head, what are the most linked to factors that lower or heighten the price: year, mileage, engine size, brand and model.
 
 ## Data
-The data is from the [Saudi Arabi Used Cars Dataset] (https://www.kaggle.com/datasets/turkibintalib/saudi-arabia-used-cars-dataset) on Kaggle, created by Turki Bintaleb and his collaborators, who got the listings from the Syarah website. The file I used for this analysis was the cleaned English file, which contains about 8,035 cars and 13 columns. Which is fewer than the 8,248 records on the dataset page, and I still don't know what was removed.
+The data is from the [Saudi Arabia Used Cars Dataset] (https://www.kaggle.com/datasets/turkibintalib/saudi-arabia-used-cars-dataset) on Kaggle, created by Turki Bintaleb and his collaborators, who got the listings from the Syarah website. The file I used for this analysis was the cleaned English file, which contains about 8,035 cars and 13 columns. Which is fewer than the 8,248 records on the dataset page, and I still don't know what was removed.
 
 The data file is not included in this repository. If you wish to run the notebook download the file from Kaggle.
 
